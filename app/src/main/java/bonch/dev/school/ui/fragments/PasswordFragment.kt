@@ -38,7 +38,7 @@ class PasswordFragment : DialogFragment() {
     private fun setListener(){
         acceptButton.setOnClickListener(){
             Log.d(TAG, "onClick: closing dialog")
-            dialog.dismiss()
+            dialog?.dismiss()
         }
     }
 

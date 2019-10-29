@@ -33,13 +33,15 @@ class ChatFragment : Fragment() {
 
     private fun initializeView(view: View) {
 
-        messageET = view.findViewById(R.id.message_et)
         sendMessageButton = view.findViewById(R.id.send_message_button)
     }
 
     private fun setListener(){
-        sendMessageButton.setOnClickListener({
-            (context as MainAppActivity).toProfileFragment()
-        })
+        sendMessageButton.setOnClickListener {
+            fragmentManager!!.beginTransaction()
+                .replace(R.id.fragment_container, ProfileFragment())
+                .addToBackStack("profile")
+                .commit()
+        }
     }
 }
