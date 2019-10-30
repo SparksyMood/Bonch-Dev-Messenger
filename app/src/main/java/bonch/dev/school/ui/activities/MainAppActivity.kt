@@ -11,6 +11,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import bonch.dev.school.R
 import bonch.dev.school.ui.fragments.ChatFragment
 import bonch.dev.school.ui.fragments.PasswordFragment
@@ -53,6 +55,9 @@ class MainAppActivity : AppCompatActivity() {
             .add(R.id.fragment_container, chatFragment)
             .commit()
         Log.d("BDM", "Ended beginTransaction")
+
+        val recyclerView: RecyclerView = findViewById(R.id.rv)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
     }
 
