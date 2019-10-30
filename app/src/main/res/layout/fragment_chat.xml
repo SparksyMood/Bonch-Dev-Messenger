@@ -7,12 +7,6 @@
     android:background="@drawable/wall2"
     tools:context=".ui.fragments.ChatFragment">
 
-    <FrameLayout
-        android:id="@+id/fragment_ch"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-
     <EditText
         android:id="@+id/message_et"
         android:layout_width="match_parent"
